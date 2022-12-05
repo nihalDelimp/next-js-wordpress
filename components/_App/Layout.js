@@ -1,16 +1,16 @@
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
-import generalSettingsData from '../../query/generalSettings/generalSettingsData';
+// import generalSettingsData from '../../query/generalSettings/generalSettingsData';
 
 const Layout = ({ children }) => {
   const [generalData, setGeneralData] = useState({});
-  useEffect(() => {
-    const genData = async () => {
-      const data = await generalSettingsData();
-      setGeneralData(data.data.generalSettings);
-    };
-    genData();
-  }, []);
+  // useEffect(() => {
+  //   const genData = async () => {
+  //     const data = await generalSettingsData();
+  //     setGeneralData(data.data.generalSettings);
+  //   };
+  //   genData();
+  // }, []);
 
   return (
     <>
@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
         <meta charSet='utf-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
 
-        <title>{generalData.description}</title>
+        {/* <title>{generalData.description}</title> */}
       </Head>
 
       {children}

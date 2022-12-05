@@ -1,28 +1,30 @@
-import React from 'react';
-import Navbar from '../../components/Navbar/Navbar';
-import TopHeader from '../../components/Navbar/TopHeader';
-import ResourceDetailsArea from '../../components/ResourceDetails/ResourceDetailsArea';
-import RelatedPost from '../../components/ResourceDetails/RelatedPost';
-import CallToAction from '../../components/Common/CallToAction';
-import Footer from '../../components/Footer/Footer';
+// import React from 'react';
+// import Navbar from '../../components/Navbar/Navbar';
+// import TopHeader from '../../components/Navbar/TopHeader';
+// import ResourceDetailsArea from '../../components/ResourceDetails/ResourceDetailsArea';
+// import RelatedPost from '../../components/ResourceDetails/RelatedPost';
+// import CallToAction from '../../components/Common/CallToAction';
+// import Footer from '../../components/Footer/Footer';
 
-// fetch resource data
-import getAllResources from '../../query/resourceQuery/allResourcesData';
-import getSingleResource from '../../query/resourceQuery/singleResourceData';
-import getHomeData from '../../query/homeQuery/homeData';
+// // fetch resource data
+// import getAllResources from '../../query/resourceQuery/allResourcesData';
+// import getSingleResource from '../../query/resourceQuery/singleResourceData';
+// import getHomeData from '../../query/homeQuery/homeData';
 
-const ResourceDetails = ({ resourceDetails, resources, homeData }) => {
-  
-  const resourceDetailsData = resourceDetails.data.resource;
-  const relatedResources = resources.data.resources.edges;
-  const logoData = homeData.data.pageBy.homeLogo;
-  const callToActionData = homeData.data.pageBy.callToAction;
-  
+const ResourceDetails = () => {
+  // const ResourceDetails = ({ resourceDetails, resources, homeData }) => {
+
+  // const resourceDetailsData = resourceDetails.data.resource;
+  // const relatedResources = resources.data.resources.edges;
+  // const logoData = homeData.data.pageBy.homeLogo;
+  // const callToActionData = homeData.data.pageBy.callToAction;
+
   // console.log(resourceDetails)
 
   return (
     <>
-      <TopHeader />
+      Heloo footer
+      {/* <TopHeader />
 
       <Navbar logoData={logoData} />
 
@@ -32,20 +34,20 @@ const ResourceDetails = ({ resourceDetails, resources, homeData }) => {
 
       <CallToAction callToActionData={callToActionData} />
 
-      <Footer />
+      <Footer /> */}
     </>
   );
 };
 
-export async function getServerSideProps({ query }) {
- 
-  return {
-    props: {
-      resourceDetails : await getSingleResource(query.slug),
-      resources: await getAllResources(),
-      homeData: await getHomeData()
-    },
-  };
-}
+// export async function getServerSideProps({ query }) {
+
+//   return {
+//     props: {
+//       resourceDetails: await getSingleResource(query.slug),
+//       resources: await getAllResources(),
+//       homeData: await getHomeData()
+//     },
+//   };
+// }
 
 export default ResourceDetails;

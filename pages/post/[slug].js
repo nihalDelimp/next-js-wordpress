@@ -7,19 +7,19 @@ import Description from '../../components/SinglePost/Description';
 import Sidebar from '../../components/SinglePost/Sidebar';
 
 // fetch data
-import getSinglePost from '../../query/single-post';
-import getHomeData from '../../query/homeQuery/homeData';
+// import getSinglePost from '../../query/single-post';
+// import getHomeData from '../../query/homeQuery/homeData';
 
 
-const Post = ({ post,homeData }) => {
-  
+const Post = ({ post, homeData }) => {
+
   const logoData = homeData.data.pageBy.homeLogo;
 
   return (
     <>
-      <header className='header-area'>
+      {/* <header className='header-area'>
         <TopHeader />
-        
+
         <Navbar logoData={logoData} />
       </header>
 
@@ -27,14 +27,14 @@ const Post = ({ post,homeData }) => {
         <div className='container'>
           <div className='row'>
             <div className='col-lg-4 col-md-12'>
-              <Sidebar 
-                widgets={ post.data.post } 
+              <Sidebar
+                widgets={post.data.post}
               />
             </div>
 
             <div className='col-lg-8 col-md-12'>
-              <Description 
-                post={post} 
+              <Description
+                post={post}
               />
 
               <Comments
@@ -46,21 +46,22 @@ const Post = ({ post,homeData }) => {
         </div>
       </div>
 
-      <Footer/>
+      <Footer /> */}
+      Heklloo
     </>
   );
 };
 
-export async function getServerSideProps({ query }) {
-  const post = await getSinglePost(query.slug);
-  const homeData = await getHomeData();
+// export async function getServerSideProps({ query }) {
+//   // const post = await getSinglePost(query.slug);
+//   const homeData = await getHomeData();
 
-  return {
-    props: {
-      post,
-      homeData
-    },
-  };
-}
+//   return {
+//     props: {
+//       post,
+//       homeData
+//     },
+//   };
+// }
 
 export default Post;

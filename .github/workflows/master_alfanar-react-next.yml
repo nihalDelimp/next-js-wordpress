@@ -50,7 +50,7 @@ jobs:
           
       - name: npm install
         run: |
-          npm install
+          npm install -g next@12.2.5
 
       - name: "Deploy to Azure Web App"
         id: deploy-to-webapp

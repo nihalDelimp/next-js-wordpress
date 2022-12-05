@@ -1,19 +1,20 @@
 import React from 'react';
-import Footer from '../../components/Footer/Footer';
-import Navbar from '../../components/Navbar/Navbar';
-import TopHeader from '../../components/Navbar/TopHeader';
-import Comments from '../../components/SinglePost/Comments';
-import Description from '../../components/SinglePost/Description';
-import Sidebar from '../../components/SinglePost/Sidebar';
+// import Footer from '../../components/Footer/Footer';
+// import Navbar from '../../components/Navbar/Navbar';
+// import TopHeader from '../../components/Navbar/TopHeader';
+// import Comments from '../../components/SinglePost/Comments';
+// import Description from '../../components/SinglePost/Description';
+// import Sidebar from '../../components/SinglePost/Sidebar';
 
 // fetch data
 // import getSinglePost from '../../query/single-post';
 // import getHomeData from '../../query/homeQuery/homeData';
 
 
-const Post = ({ post, homeData }) => {
+const Post = () => {
+  // const Post = ({ post, homeData }) => {
 
-  const logoData = homeData.data.pageBy.homeLogo;
+  // const logoData = homeData.data.pageBy.homeLogo;
 
   return (
     <>

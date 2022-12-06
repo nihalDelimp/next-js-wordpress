@@ -11,6 +11,8 @@ import "../styles/nihal.css";
 import "../styles/home.min.css";
 import "../styles/landing-page.css";
 import "../styles/theme.css";
+import "../styles/astra-custom.css";
+import "../styles/global-astra.css";
 
 
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";

@@ -20,22 +20,40 @@ const getNewHomeData = async () => {
                   }
                 }
               }
-            }
-          }
-
-          videoSection{
-            video{
-              ... on Page_Videosection_Video_AddVideo{
+              ... on Page_Bannersection_Banner_Video {
+                 video
+              }
+              ... on Page_Bannersection_Banner_Image{
                 fieldGroupName,
-                bannerVideo{
-                  bannerVideo
+                singleImage{
+                  sourceUrl
                 }
+              }
+             ... on Page_Bannersection_Banner_ReferencesSection {
+              fieldGroupName,
+                referencesSectionItems{
+                  title
+                  description
+                 images{
+                  sourceUrl
+                 }
                 }
+              }
+              ... on Page_Bannersection_Banner_FooterTopSection{
+                fieldGroupName,
+               footerSection{
+                title
+                description
+                image{
+                  sourceUrl
+                }
+                buttonLabel
+                url
+               }
+              }
+
             }
           }
-          
-
-
         }
       }
     `,
@@ -44,3 +62,6 @@ const getNewHomeData = async () => {
 };
 
 export default getNewHomeData;
+
+
+

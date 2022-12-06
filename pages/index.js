@@ -18,13 +18,21 @@
 // import getHomeData from "../query/homeQuery/homeData";
 // import getAllPosts from "../query/posts";
 // import getAllResources from "../query/resourceQuery/allResourcesData";
+import { it } from "date-fns/locale";
 import BannerNihal from "../components/BannerNihal/BannerNihal";
+import Footer from "../components/Footer/Footer";
+import Header from "../components/Header/Header";
 import getNewHomeData from "../query/newHome/newHome";
 
 const Index = ({ home }) => {
   // console.log(newHome.data.pageBy.nihal.nihalLife[0].teamImage, "resos")
   const bannerData = home.data.pageBy.bannerSection.banner;
-  const videoData = home.data.pageBy.videoSection.video;
+  const videoData = bannerData.filter(item => item.video)
+  const singleImageData = bannerData.filter(item => item.singleImage)
+  const referencesData = bannerData.filter(item => item.referencesSectionItems )
+  const footerSectionData = bannerData.filter(item => item.footerSection )
+
+  // const referencesData = home.data.pageBy.referencesSection.referencesSection;
   // const featureData = homeData.data.pageBy.featureSection;
   // const aboutData = homeData.data.pageBy.aboutSection;
   // const partnerData = homeData.data.pageBy.partnerSection;
@@ -35,11 +43,13 @@ const Index = ({ home }) => {
   // const logoData = homeData.data.pageBy.homeLogo;
   // const callToActionData = homeData.data.pageBy.callToAction;
   // const posts = homePosts.data.posts.edges;
-  console.log(videoData, "bannerDatabannerDatabannerData")
+  console.log("bannerDataTTTTTT" , singleImageData)
 
   return (
     <>
-      <BannerNihal banner={bannerData} video={videoData} />
+      {/* <Header/> */}
+      <BannerNihal banner={bannerData} singleImageData = {singleImageData} video={videoData} references={referencesData} footerSection = {footerSectionData} />
+      <Footer/>
       {/* <TopHeader /> */}
 
       {/* <Navbar logoData={logoData} />

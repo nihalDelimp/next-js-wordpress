@@ -1,7 +1,7 @@
 import poster from '../../public/img/blog/blog8.jpg'
 let contactusheader = 'https://alfanar-digital-solution.azurewebsites.net/public/final-images/contactus-header-img.png';
 let careersheader = 'https://alfanar-digital-solution.azurewebsites.net/public/final-images/careers-header-img.png'
-const BannerNihal = ({ banner, video, references, footerSection , singleImageData }) => {
+const Banner = ({ banner, video, references, footerSection, singleImageData }) => {
 
     // console.log(video[0].bannerVideo[0].bannerVideo, "viivivivivivi")
     // footerSection && footerSection.length > 0 && footerSection.map(item => {
@@ -9,12 +9,12 @@ const BannerNihal = ({ banner, video, references, footerSection , singleImageDat
     // })
     return (
         <>
-            <div id="canvas"><img  src = {singleImageData[0].singleImage.sourceUrl} ></img></div>
+            <div id="canvas"><img src={singleImageData[0].singleImage.sourceUrl} ></img></div>
             {
                 banner.map((item) => (
                     item.bannerItems && item.bannerItems.length > 0 && item.bannerItems.map((item2, index2) => {
                         return (
-                            <div className="wp-block-uagb-container slide-div uagb-block-a3f2e44f alignfull uagb-is-root-container" style={{ backgroundImage: `url(${item2.bannerImage.sourceUrl})` }} id="sec2">
+                            <div key={index2} className="wp-block-uagb-container slide-div uagb-block-a3f2e44f alignfull uagb-is-root-container" style={{ backgroundImage: `url(${item2.bannerImage.sourceUrl})` }} id="sec2">
                                 <div className="uagb-container-inner-blocks-wrap">
                                     <h1 className="text-center text-white pt-2 pb-2 bottom-buffer-0point5rem">{item2.bannerTitle} </h1>
                                     <p className="text-white pt-2 mb-2 mt-2">{item2.bannerDescription}</p>
@@ -133,4 +133,4 @@ const BannerNihal = ({ banner, video, references, footerSection , singleImageDat
     );
 };
 
-export default BannerNihal;
+export default Banner;

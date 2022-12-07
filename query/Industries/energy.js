@@ -1,11 +1,11 @@
 import { gql } from "@apollo/client";
 import { client } from "../config";
 
-const getGovermentData = async () => {
-  const newgovermentData = await client.query({
-    query: gql`
+const getEnergyData = async () => {
+    const energyData = await client.query({
+        query: gql`
       query MyQuery {
-        pageBy(uri: "${process.env.WORDPRESS_URL}/index.php/government-and-semi-government") {     
+        pageBy(uri: "${process.env.WORDPRESS_URL}/index.php/energy-utility") {     
             industriesContents {
                 industriesPageContent {
               ... on Page_Industriescontents_IndustriesPageContent_IndustrySectionOne {
@@ -37,7 +37,6 @@ const getGovermentData = async () => {
             }
           }
         }
-
         ... on Page_Industriescontents_IndustriesPageContent_IndustrySectionFour {
           fieldGroupName
           heading
@@ -50,11 +49,11 @@ const getGovermentData = async () => {
         }
       }
     `,
-  });
-  return newgovermentData;
+    });
+    return energyData;
 };
 
-export default getGovermentData;
+export default getEnergyData;
 
 
 

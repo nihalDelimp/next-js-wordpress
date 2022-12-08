@@ -1,5 +1,4 @@
 import React from 'react'
-import Description from './../SinglePost/Description';
 
 function Government({ govermentData }) {
     return (

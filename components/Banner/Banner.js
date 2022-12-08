@@ -4,11 +4,6 @@ let careersheader = 'https://alfanar-digital-solution.azurewebsites.net/public/f
 
 
 const Banner = ({ banner, video, references, footerSection, singleImageData }) => {
-
-    // console.log(video[0].bannerVideo[0].bannerVideo, "viivivivivivi")
-    // footerSection && footerSection.length > 0 && footerSection.map(item => {
-    //     console.log('footerSectionTTTTTT', item.footerSection)
-    // })
     return (
         <>
             <div id="canvas"><img src={singleImageData[0].singleImage.sourceUrl} ></img></div>

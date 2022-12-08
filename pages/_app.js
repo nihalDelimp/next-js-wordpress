@@ -16,8 +16,6 @@ import "../styles/global-astra.css";
 
 
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
-import Layout from "../components/_App/Layout";
-import GoTop from "../components/Shared/GoTop";
 
 export const client = new ApolloClient({
 	uri: `${process.env.WORDPRESS_URL}/graphql`,
@@ -26,13 +24,9 @@ export const client = new ApolloClient({
 
 function MyApp({ Component, pageProps }) {
 	return (
-		<Layout>
-			<ApolloProvider client={client}>
-				<Component {...pageProps} />
-
-				<GoTop />
-			</ApolloProvider>
-		</Layout>
+		<ApolloProvider client={client}>
+			<Component {...pageProps} />
+		</ApolloProvider>
 	);
 }
 

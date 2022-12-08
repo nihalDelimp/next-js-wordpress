@@ -1,6 +1,8 @@
 import poster from '../../public/img/blog/blog8.jpg'
 let contactusheader = 'https://alfanar-digital-solution.azurewebsites.net/public/final-images/contactus-header-img.png';
 let careersheader = 'https://alfanar-digital-solution.azurewebsites.net/public/final-images/careers-header-img.png'
+
+
 const Banner = ({ banner, video, references, footerSection, singleImageData }) => {
 
     // console.log(video[0].bannerVideo[0].bannerVideo, "viivivivivivi")
@@ -14,7 +16,7 @@ const Banner = ({ banner, video, references, footerSection, singleImageData }) =
                 banner.map((item) => (
                     item.bannerItems && item.bannerItems.length > 0 && item.bannerItems.map((item2, index2) => {
                         return (
-                            <div key={index2} className="wp-block-uagb-container slide-div uagb-block-a3f2e44f alignfull uagb-is-root-container" style={{ backgroundImage: `url(${item2.bannerImage.sourceUrl})` }} id="sec2">
+                            <div key={index2 + 1} className="wp-block-uagb-container slide-div uagb-block-a3f2e44f alignfull uagb-is-root-container" style={{ backgroundImage: `url(${item2.bannerImage.sourceUrl})` }} id="sec2">
                                 <div className="uagb-container-inner-blocks-wrap">
                                     <h1 className="text-center text-white pt-2 pb-2 bottom-buffer-0point5rem">{item2.bannerTitle} </h1>
                                     <p className="text-white pt-2 mb-2 mt-2">{item2.bannerDescription}</p>
@@ -46,10 +48,10 @@ const Banner = ({ banner, video, references, footerSection, singleImageData }) =
             <section id="landing-page-references-section" className="section bg-white fp-section fp-table active fp-completely" data-fp-styles="null" >
                 <div id="landing-page-references-container" className="container-lg pb-4 pt-4 pb-lg-6 pt-lg-6">
                     <div className="row pt-2 pb-2">
-                        {references && references.length > 0 && references.map(ele =>
+                        {references && references.length > 0 && references.map((ele, index) =>
                             ele.referencesSectionItems && ele.referencesSectionItems.length > 0 &&
-                            ele.referencesSectionItems.map(item =>
-                            (<div className="col-md-6 col-sm-12">
+                            ele.referencesSectionItems.map((item, index2) =>
+                            (<div key={index2 + 1} className="col-md-6 col-sm-12">
                                 <div className="row text-center justify-content-center p-3">
                                     <h1 className="font-weight-bold text-primary bottom-buffer-2point5rem text-center">{item.title}</h1>
                                     <p className="text-primary bottom-buffer-2point5rem small font-weight-bold col-lg-9">{item.description}</p>
@@ -79,8 +81,8 @@ const Banner = ({ banner, video, references, footerSection, singleImageData }) =
                         <div className="row pt-2 pb-2">
                             {references && references.length > 0 && references.map(ele =>
                                 ele.referencesSectionItems && ele.referencesSectionItems.length > 0 &&
-                                ele.referencesSectionItems.map(item =>
-                                (<div className="col-6">
+                                ele.referencesSectionItems.map((item, index) =>
+                                (<div key={index + 1} className="col-6">
                                     <div className="swiper-alfanar">
                                         <div className="swiper-container top-clients-swiper-index">
                                             <div className="swiper-wrapper">
@@ -111,8 +113,8 @@ const Banner = ({ banner, video, references, footerSection, singleImageData }) =
                         <div className="row equalRow">
                             {footerSection && footerSection.length > 0 && footerSection.map(ele =>
                                 ele.footerSection && ele.footerSection.length > 0 &&
-                                ele.footerSection.map(item =>
-                                (<div className="col-lg-6 p-3 col-12">
+                                ele.footerSection.map((item, index) =>
+                                (<div key={index + 1} className="col-lg-6 p-3 col-12">
                                     <div className="row h-100">
                                         <div className="col-lg-7 col-md-12">
                                             <h1 className="font-weight-bold text-white bottom-buffer-2point5rem" style={{ fontSize: '42px' }}>{item.title}</h1>

@@ -1,11 +1,11 @@
 import { gql } from "@apollo/client";
 import { client } from "../config";
 
-const getGovermentData = async () => {
-  const newgovermentData = await client.query({
+const getFinanceData = async () => {
+  const financeData = await client.query({
     query: gql`
       query MyQuery {
-        pageBy(uri: "${process.env.WORDPRESS_URL}/index.php/government-and-semi-government") {     
+        pageBy(uri: "${process.env.WORDPRESS_URL}/index.php/finance") {     
             industriesContents {
                 industriesPageContent {
               ... on Page_Industriescontents_IndustriesPageContent_IndustrySectionOne {
@@ -51,10 +51,10 @@ const getGovermentData = async () => {
       }
     `,
   });
-  return newgovermentData;
+  return financeData;
 };
 
-export default getGovermentData;
+export default getFinanceData;
 
 
 

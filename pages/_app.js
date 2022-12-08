@@ -17,6 +17,8 @@ import "../styles/global-astra.css";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+import Script from 'next/script'
+
 export const client = new ApolloClient({
 	uri: `${process.env.WORDPRESS_URL}/graphql`,
 	cache: new InMemoryCache(),
@@ -25,7 +27,8 @@ export const client = new ApolloClient({
 function MyApp({ Component, pageProps }) {
 	return (
 		<>
-			{/* <Header /> */}
+
+			<Header />
 			<ApolloProvider client={client}>
 				<Component {...pageProps} />
 			</ApolloProvider>

@@ -1,24 +1,4 @@
-// import Navbar from "../components/Navbar/Navbar";
-// import TopHeader from "../components/Navbar/TopHeader";
 
-// import Banner from "../components/HomeOne/Banner";
-// import Feature from "../components/HomeOne/Feature";
-// import About from "../components/HomeOne/About";
-// import Partner from "../components/Common/Partner";
-// import Service from "../components/HomeOne/Service";
-// import Websecurity from "../components/HomeOne/Websecurity";
-// import ResourceArea from "../components/Common/ResourceArea";
-// import Feedback from "../components/Common/Feedback";
-// import LatestBlogPost from "../components/Common/LatestBlogPost";
-// import CallToAction from "../components/Common/CallToAction";
-// import Footer from "../components/Footer/Footer";
-
-// fetch all data
-// import getNavbarData from "../query/navbar/navData";
-// import getHomeData from "../query/homeQuery/homeData";
-// import getAllPosts from "../query/posts";
-// import getAllResources from "../query/resourceQuery/allResourcesData";
-import { it } from "date-fns/locale";
 import Banner from "../components/Banner/Banner";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
@@ -56,49 +36,30 @@ const Index = ({ home, government, healthcare, finance, energy, education, commu
   const referencesData = bannerData.filter(item => item.referencesSectionItems)
   const footerSectionData = bannerData.filter(item => item.footerSection)
 
-  // const referencesData = home.data.pageBy.referencesSection.referencesSection;
-  // const featureData = homeData.data.pageBy.featureSection;
-  // const aboutData = homeData.data.pageBy.aboutSection;
-  // const partnerData = homeData.data.pageBy.partnerSection;
-  // const serviceData = homeData.data.pageBy.serviceSection;
-  // const resourcesData = resources.data.resources.edges;
-  // const securityData = homeData.data.pageBy.websecuritySection;
-  // const feedbackData = homeData.data.pageBy.feedbackSection;
-  // const logoData = homeData.data.pageBy.homeLogo;
-  // const callToActionData = homeData.data.pageBy.callToAction;
-  // const posts = homePosts.data.posts.edges;
+
+
+  // Industries Page Content
+  const govermentData = government.data.pageBy.industriesContents.industriesPageContent;
+  const healthcareData = healthcare.data.pageBy.industriesContents.industriesPageContent;
+  const financeData = finance.data.pageBy.industriesContents.industriesPageContent;
+  const energyData = energy.data.pageBy.industriesContents.industriesPageContent;
+  const educationData = education.data.pageBy.industriesContents.industriesPageContent;
+  const communicationData = communication.data.pageBy.industriesContents.industriesPageContent;
+  const enterPriseData = enterprise.data.pageBy.industriesContents.industriesPageContent;
+
   console.log("bannerDataTTTTTT", singleImageData)
 
   return (
     <>
-      {/* <Header/> */}
       <Banner banner={bannerData} singleImageData={singleImageData} video={videoData} references={referencesData} footerSection={footerSectionData} />
+      <Government govermentData={govermentData} />
+      <Healthcare healthcareData={healthcareData} />
+      <Finance financeData={financeData} />
+      <Energy energyData={energyData} />
+      <Education educationData={educationData} />
+      <Communication communicationData={communicationData} />
+      <EnterPrise enterPriseData={enterPriseData} />
       <Footer />
-      {/* <TopHeader /> */}
-
-      {/* <Navbar logoData={logoData} />
-
-      <Banner bannerData={bannerData} />
-
-      <Feature featureData={featureData} />
-
-      <About aboutData={aboutData} />
-
-      <Partner partnerData={partnerData} />
-
-      <Service serviceData={serviceData} />
-
-      <Websecurity securityData={securityData} />
-
-      <ResourceArea resourcesData={resourcesData} />
-
-      <Feedback feedbackData={feedbackData} bgColor="bg-f5f8ff" />
-
-      <LatestBlogPost posts={posts} />
-
-      <CallToAction callToActionData={callToActionData} />
-
-      <Footer /> */}
     </>
   );
 };

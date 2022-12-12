@@ -67,11 +67,11 @@ const getSmartSolutionData = async () => {
             icon
           }
         }
-        ... on Page_Servicessection_ServicesContent_ServicesSolutionsSection5 {
-          fieldGroupName
-          heading
-          carouselImages {
-            sourceUrl
+        ... on Page_Servicessection_ServicesContent_ServicesSolutionsTextSlider {
+            fieldGroupName
+            
+            backgroundImage {
+              sourceUrl
           }
         }
             }

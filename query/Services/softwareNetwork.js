@@ -67,13 +67,7 @@ const getSoftwareNetworkData = async () => {
             icon
           }
         }
-        ... on Page_Servicessection_ServicesContent_ServicesSolutionsSection5 {
-          fieldGroupName
-          heading
-          carouselImages {
-            sourceUrl
-          }
-        }
+     
             }
           }
         }

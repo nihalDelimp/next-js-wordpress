@@ -2,16 +2,16 @@ import getsmartSolutionsData from "../query/Services/smartSolutions";
 import SmartSolutions from '../components/Services/SmartSolutions';
 
 const SmartSolutionsIndustry = ({ smartSolutions }) => {
+    const resData = smartSolutions.data.pageBy.servicesSection.servicesContent;
+    const section1 = resData && resData[0] ? resData[0] :  ""
+    const section2 = resData && resData[1] ? resData[1] :  ""
+    const section3 = resData && resData[2] ? resData[3] :  ""
+    const section4 = resData && resData[4] ? resData[4] :  ""
 
-    console.log(smartSolutions, "smahsdsahdksadsa")
-    // const bannerData = home.data.pageBy.bannerSection.banner;
-    // const videoData = bannerData.filter(item => item.video)
-    // const singleImageData = bannerData.filter(item => item.singleImage)
-    // const referencesData = bannerData.filter(item => item.referencesSectionItems)
-    // const footerSectionData = bannerData.filter(item => item.footerSection)
+    console.log("resDataDDDDDDDDDDDDDDDDD" , resData)
+
     return (
-        <h1>Nihalll</h1>
-        // <Banner banner={bannerData} singleImageData={singleImageData} video={videoData} references={referencesData} footerSection={footerSectionData} />
+        <SmartSolutions section1={section1} section2={section2} section3={section3} section4={section4}   />
     );
 };
 

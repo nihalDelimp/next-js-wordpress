@@ -38,22 +38,7 @@ const getCyberSecurityData = async () => {
             }
           }
         }
-        ... on Page_Servicessection_ServicesContent_ServicesSolutionsSection3 {
-            fieldGroupName
-          descriptionWithSubHeading {
-            description
-            fieldGroupName
-            heading
-            listData {
-              fieldGroupName
-              listItems
-            }
-          }
-          heading
-          image {
-            sourceUrl
-          }
-        }
+
         ... on Page_Servicessection_ServicesContent_ServicesSolutionsSection4 {
             fieldGroupName
           heading
@@ -67,13 +52,7 @@ const getCyberSecurityData = async () => {
             icon
           }
         }
-        ... on Page_Servicessection_ServicesContent_ServicesSolutionsSection5 {
-          fieldGroupName
-          heading
-          carouselImages {
-            sourceUrl
-          }
-        }
+      
             }
           }
         }

@@ -35,9 +35,11 @@ function Footer() {
                                     <li id="menu-item-1076" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1076"><Link href="/blogs/" className="menu-link"><a>Blogs</a></Link></li>
                                 </ul></nav></section></aside>
                             <aside className="footer-widget-area widget-area site-footer-focus-item footer-widget-area-inner" data-section="sidebar-widgets-footer-widget-4" aria-label="Footer Widget 4">
-                                <section id="nav_menu-5" className="widget widget_nav_menu"><h2 className="widget-title">About Us</h2><nav className="menu-about-us-footer-container" aria-label="About Us"><ul id="menu-about-us-footer" className="menu"><li id="menu-item-1077" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1077"><a href="/about-us/" className="menu-link">About alfanar Digital Solutions</a></li>
+                                <section id="nav_menu-5" className="widget widget_nav_menu"><h2 className="widget-title">About Us</h2><nav className="menu-about-us-footer-container" aria-label="About Us">
+                                    <ul id="menu-about-us-footer" className="menu">
+                                    <li id="menu-item-1077" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1077"><Link href="/about-us/" className="menu-link">About alfanar Digital Solutions</Link></li>
                                     <li id="menu-item-1078" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1078"><Link href="/our-team/" className="menu-link"><a>Our Team</a></Link></li>
-                                    <li id="menu-item-1079" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1079"><Link href="/careers/" className="menu-link"><a>Careers</a></Link></li>
+                                    <li id="menu-item-1079" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1079"><a href="https://jobs.alfanar.com/alfanar/go/All-Openings/4442101/" target="_blank" className="text-white font-normal pb-1">Careers</a></li>
                                     <li id="menu-item-1080" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1080"><Link href="/contactus/" className="menu-link"><a>Contact us</a></Link></li>
                                 </ul></nav></section></aside>
                         </div>

@@ -1,10 +1,9 @@
 import React from 'react'
 
-function WhitePaper({tabContainer , tabMenuItems }) {
+function WhitePaper({tabContainer , tabMenuItems , headerData }) {
    console.log("tabContainer" , tabContainer)
    console.log("tabMenuItems" , tabMenuItems)
 
-  
   return (
     <div >
        <section id="white-paper-section_1"  style={{ backgroundColor: 'rgb(2,0,36)' }} className="wow fadeInUp section">
@@ -19,11 +18,11 @@ function WhitePaper({tabContainer , tabMenuItems }) {
             </div>
             <div className="row">
                <div className="pt-2 pb-2 col-lg-6 align-self-center wow">
-                  <h1 className="text-white font-bold bottom-buffer-2point5rem">White Paper</h1>
-                  <p className="text-white font-medium extra-large">Sharing knowledge helps us connect, perform, and become stronger as professionals & experts. we  put our knowledge and experience with our clients to empower and help them understand complex technichal issues and make the right decision.</p>
+                  <h1 className="text-white font-bold bottom-buffer-2point5rem">{headerData[0]?.heading}</h1>
+                  <p className="text-white font-medium extra-large">{headerData[0]?.description}</p>
                </div>
                <div className="pt-2 pb-2 col-lg-6 align-self-center text-lg-right text-center wow">
-                  {/* <img className="w-100" src="/public/final-images/whitepaper-header-img.png"/> */}
+                  <img className="w-100" src= {headerData[0].image?.sourceUrl}/>
                </div>
             </div>
          </div>

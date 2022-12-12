@@ -5,7 +5,19 @@ const getIndustryInsightsData = async () => {
     const applicationData = await client.query({
         query: gql`
       query MyQuery {
-        pageBy(uri: "${process.env.WORDPRESS_URL}/index.php/industry-insights") {     
+        pageBy(uri: "${process.env.WORDPRESS_URL}/index.php/industry-insights") { 
+          industriesContents {
+         industriesPageContent {
+        ... on Page_Industriescontents_IndustriesPageContent_IndustrySectionOne {
+          description
+          fieldGroupName
+          heading
+          image {
+            sourceUrl
+          }
+        }
+      }
+      }    
           insights {
           tabSection {
         ... on Page_Insights_TabSection_TabItems {

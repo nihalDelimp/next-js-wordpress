@@ -18,9 +18,32 @@ const getAbouDigitalSolutionsData = async () => {
           }
         }
       }
-      }   
-            aboutSection {
-           aboutUsContent {
+      }
+
+      bannerSection {
+        banner {
+      ... on Page_Bannersection_Banner_Video {
+                 video
+              } 
+
+            }
+      }
+
+      industriesContents {
+       industriesPageContent {
+      ... on Page_Industriescontents_IndustriesPageContent_IndustrySectionFour {
+          fieldGroupName
+          heading
+          carouselImages {
+            sourceUrl
+          }
+        }
+                }
+      }
+
+
+    aboutSection {
+      aboutUsContent {
         ... on Page_Aboutsection_AboutUsContent_AboutUsWithCounter {
           description
           fieldGroupName

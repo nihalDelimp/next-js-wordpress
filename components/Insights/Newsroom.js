@@ -1,6 +1,8 @@
-import React from 'react'
+import React ,{useState} from 'react'
 
-function Newsroom({headerData}) {
+function Newsroom({tabContainer, tabMenuItems, headerData}) {
+   const [tabMenuId, setTabMenuId] = useState('blogs')
+
   return (
     <div >
       <section id="newsroom-section_1" style={{ backgroundColor: 'rgb(2,0,36)' }} className="wow fadeInUp bg-gradient section">
@@ -29,141 +31,37 @@ function Newsroom({headerData}) {
          <div id="newsroom-container" className="container-lg pt-4 pb-4 pt-lg-8 pb-lg-8">
             <div className="row pt-4 pb-4">
                <div className="col-lg-12">
-                  <ul className="nav nav-tabs alfanar-tabs">
-                     <li className="pb-3">
-                        <a className="text-dark-grey pb-lg-3 pb-2 active show" data-toggle="tab" href="#blogs">
-                           News & Events
-                        </a>
-                     </li>
-                     <li className="pb-3">
-                        <a data-toggle="tab" href="#pressrelease">
-                           Press Release
-                        </a>
-                     </li>
-                   </ul>
+                   <ul className="nav nav-tabs alfanar-tabs">
+                        {tabMenuItems && tabMenuItems.length > 0 &&
+                           tabMenuItems.map((item, index) =>
+                              <li key={index + 1} className="pb-3">
+                                 <a onClick={() => setTabMenuId(item.tabId)} className={`text-dark-grey pb-lg-3 pb-2 show   ${item.tabId == tabMenuId ? 'active' : ''} `} data-toggle="tab">
+                                    {item?.tabName}
+                                 </a>
+                              </li>)}
+                     </ul>
                   <div className="tab-content alfanar-tab-content">
                      <div id="blogs" className="mt-2 mt-lg-5 mb-3 tab-pane active">
                         <div className="row">
-                           <div className="col-lg-4 col-sm-12 pt-4 pb-4">
-                              <div className="service-block-container">
-                                 <div className="service-block-image bg-primary">
-                                    <img src="https://www.bernalministries.us/wp-content/uploads/2021/08/Screen-Shot-2021-11-11-at-1.15.31-PM.png"/>
-                                 </div>
-                                 <div className="service-block-content text-justify bg-section-grey-1 p-3 m-4 pr-lg-4">
-                                    <p className="small pt-2 mb-0 text-left">By: Hosam Ahmad</p>
-                                    <h2 className="pb-3 text-dark-grey pt-2 pr-lg-5 mr-lg-5">Blog Title</h2>
-                                    <p className="pt-2 pb-2 text-dark-grey pr-lg-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                                    <p className="small mb-0 text-right">2021/1/1</p>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-lg-4 col-sm-12 pt-4 pb-4">
-                              <div className="service-block-container">
-                                 <div className="service-block-image bg-primary">
-                                    <img src="https://www.bernalministries.us/wp-content/uploads/2021/08/Screen-Shot-2021-11-11-at-1.15.31-PM.png"/>
-                                 </div>
-                                 <div className="service-block-content text-justify bg-section-grey-1 p-3 m-4 pr-lg-4">
-                                    <p className="small pt-2 mb-0 text-left">By: Hosam Ahmad</p>
-                                    <h2 className="pb-3 text-dark-grey pt-2 pr-lg-5 mr-lg-5">Blog Title</h2>
-                                    <p className="pt-2 pb-2 text-dark-grey pr-lg-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                                    <p className="small mb-0 text-right">2021/1/1</p>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-lg-4 col-sm-12 pt-4 pb-4">
-                              <div className="service-block-container">
-                                 <div className="service-block-image bg-primary">
-                                    <img src="https://www.bernalministries.us/wp-content/uploads/2021/08/Screen-Shot-2021-11-11-at-1.15.31-PM.png"/>
-                                 </div>
-                                 <div className="service-block-content text-justify bg-section-grey-1 p-3 m-4 pr-lg-4">
-                                    <p className="small pt-2 mb-0 text-left">By: Hosam Ahmad</p>
-                                    <h2 className="pb-3 text-dark-grey pt-2 pr-lg-5 mr-lg-5">Blog Title</h2>
-                                    <p className="pt-2 pb-2 text-dark-grey pr-lg-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                                    <p className="small mb-0 text-right">2021/1/1</p>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div className="row">
-                           <div className="col-lg-4 col-sm-12 pt-4 pb-4">
-                              <div className="service-block-container">
-                                 <div className="service-block-image bg-primary">
-                                    <img src="https://www.bernalministries.us/wp-content/uploads/2021/08/Screen-Shot-2021-11-11-at-1.15.31-PM.png"/>
-                                 </div>
-                                 <div className="service-block-content text-justify bg-section-grey-1 p-3 m-4 pr-lg-4">
-                                    <p className="small pt-2 mb-0 text-left">By: Hosam Ahmad</p>
-                                    <h2 className="pb-3 text-dark-grey pt-2 pr-lg-5 mr-lg-5">Blog Title</h2>
-                                    <p className="pt-2 pb-2 text-dark-grey pr-lg-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                                    <p className="small mb-0 text-right">2021/1/1</p>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-lg-4 col-sm-12 pt-4 pb-4">
-                              <div className="service-block-container">
-                                 <div className="service-block-image bg-primary">
-                                    <img src="https://www.bernalministries.us/wp-content/uploads/2021/08/Screen-Shot-2021-11-11-at-1.15.31-PM.png"/>
-                                 </div>
-                                 <div className="service-block-content text-justify bg-section-grey-1 p-3 m-4 pr-lg-4">
-                                    <p className="small pt-2 mb-0 text-left">By: Hosam Ahmad</p>
-                                    <h2 className="pb-3 text-dark-grey pt-2 pr-lg-5 mr-lg-5">Blog Title</h2>
-                                    <p className="pt-2 pb-2 text-dark-grey pr-lg-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                                    <p className="small mb-0 text-right">2021/1/1</p>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-lg-4 col-sm-12 pt-4 pb-4">
-                              <div className="service-block-container">
-                                 <div className="service-block-image bg-primary">
-                                    <img src="https://www.bernalministries.us/wp-content/uploads/2021/08/Screen-Shot-2021-11-11-at-1.15.31-PM.png"/>
-                                 </div>
-                                 <div className="service-block-content text-justify bg-section-grey-1 p-3 m-4 pr-lg-4">
-                                    <p className="small pt-2 mb-0 text-left">By: Hosam Ahmad</p>
-                                    <h2 className="pb-3 text-dark-grey pt-2 pr-lg-5 mr-lg-5">Blog Title</h2>
-                                    <p className="pt-2 pb-2 text-dark-grey pr-lg-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                                    <p className="small mb-0 text-right">2021/1/1</p>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div id="pressrelease" className="mt-2 mt-lg-5 mb-3 tab-pane fade">
-                        <div className="row">
-                           <div className="col-lg-4 col-sm-12 pt-4 pb-4">
-                              <div className="service-block-container">
-                                 <div className="service-block-image bg-primary">
-                                    <img src="https://www.bernalministries.us/wp-content/uploads/2021/08/Screen-Shot-2021-11-11-at-1.15.31-PM.png"/>
-                                 </div>
-                                 <div className="service-block-content text-justify bg-section-grey-1 p-3 m-4 pr-lg-4">
-                                    <h2 className="pb-3 text-dark-grey pt-2">Press Release Title</h2>
-                                    <p className="pt-2 pb-2 text-dark-grey pr-lg-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                                    <p className="small mb-0 text-right">2021/1/1</p>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-lg-4 col-sm-12 pt-4 pb-4">
-                              <div className="service-block-container">
-                                 <div className="service-block-image bg-primary">
-                                    <img src="https://www.bernalministries.us/wp-content/uploads/2021/08/Screen-Shot-2021-11-11-at-1.15.31-PM.png"/>
-                                 </div>
-                                 <div className="service-block-content text-justify bg-section-grey-1 p-3 m-4 pr-lg-4">
-                                    <h2 className="pb-3 text-dark-grey pt-2">Press Release Title</h2>
-                                    <p className="pt-2 pb-2 text-dark-grey pr-lg-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                                    <p className="small mb-0 text-right">2021/1/1</p>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-lg-4 col-sm-12 pt-4 pb-4">
-                              <div className="service-block-container">
-                                 <div className="service-block-image bg-primary">
-                                    <img src="https://www.bernalministries.us/wp-content/uploads/2021/08/Screen-Shot-2021-11-11-at-1.15.31-PM.png"/>
-                                 </div>
-                                 <div className="service-block-content text-justify bg-section-grey-1 p-3 m-4 pr-lg-4">
-                                    <h2 className="pb-3 text-dark-grey pt-2">Press Release Title</h2>
-                                    <p className="pt-2 pb-2 text-dark-grey pr-lg-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                                    <p className="small mb-0 text-right">2021/1/1</p>
-                                 </div>
-                              </div>
-                           </div>
+                        {tabContainer && tabContainer.length > 0 &&
+                                 tabContainer.map((ele, index) =>
+                                    ele.tabMenuId == tabMenuId &&
+                                    ele.tabData.map((item, index2) =>
+                                       <div key={index2 + 1} className="col-lg-4 col-sm-12 pt-4 pb-4">
+                                          <div className="service-block-container">
+                                             <div className="service-block-image bg-primary">
+                                                <img src= {item?.image?.sourceUrl} />
+                                             </div>
+                                             <div className="service-block-content text-justify bg-section-grey-1 p-3 m-4 pr-lg-4">
+                                                <p className="small pt-2 mb-0 text-left">{item?.by}</p>
+                                                <h2 className="pb-3 text-dark-grey pt-2 pr-lg-5 mr-lg-5">{item.title}</h2>
+                                                <p className="pt-2 pb-2 text-dark-grey pr-lg-5">{item.description}</p>
+                                                <p className="small mb-0 text-right">{item.buttonLabel}</p>
+                                             </div>
+                                          </div>
+                                       </div>)
+                                 )
+                              }
                         </div>
                      </div>
                   </div>

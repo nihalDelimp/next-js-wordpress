@@ -2,10 +2,22 @@ import { gql } from "@apollo/client";
 import { client } from "../config";
 
 const getWhitePaperData = async () => {
-    const applicationData = await client.query({
-        query: gql`
+  const applicationData = await client.query({
+    query: gql`
       query MyQuery {
-        pageBy(uri: "${process.env.WORDPRESS_URL}/index.php/white-paper") {     
+        pageBy(uri: "${process.env.WORDPRESS_URL}/index.php/white-paper") { 
+          industriesContents {
+         industriesPageContent {
+        ... on Page_Industriescontents_IndustriesPageContent_IndustrySectionOne {
+          description
+          fieldGroupName
+          heading
+          image {
+            sourceUrl
+          }
+        }
+      }
+      }
             insights {
           tabSection {
         ... on Page_Insights_TabSection_TabItems {
@@ -37,8 +49,8 @@ const getWhitePaperData = async () => {
         }
       }
     `,
-    });
-    return applicationData;
+  });
+  return applicationData;
 };
 
 export default getWhitePaperData;

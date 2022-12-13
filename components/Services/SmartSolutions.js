@@ -1,7 +1,13 @@
-import React ,{useState ,useEffect} from 'react'
+import React ,{useState ,useEffect} from 'react';
+// import CommonFooter from '../CommonFooter';
 
 function SmartSolutions({section1 ,section2 ,section3 , section4}) {
+    console.log('SmartSolutionsTTTTTTTTTTTTT1' , section1)
     console.log('SmartSolutionsTTTTTTTTTTTTT2' , section2)
+    console.log('SmartSolutionsTTTTTTTTTTTTT3' , section3)
+    console.log('SmartSolutionsTTTTTTTTTTTTT4' , section4)
+
+
 
    useEffect(() =>{
    },[])
@@ -104,9 +110,9 @@ function SmartSolutions({section1 ,section2 ,section3 , section4}) {
             </div>
         </section>
     </section>
-    <section id="smart-solutions-section_3" className="section  bg-size-cover bg-no-repeat bg-center" >
 
-        <section id="" className="slide  bg-size-cover bg-no-repeat bg-center" style={{backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important`}} >
+    <section id="smart-solutions-section_3" className="section  bg-size-cover bg-no-repeat bg-center" >
+        <section id="" className="slide  bg-size-cover bg-no-repeat bg-center" style={{backgroundImage: `url(${section3?.backgroundImage?.sourceUrl}) !important`}} >
             <div id="smart-solutions-container" className="container-lg">
                <div className="mx-lg-6 mx-4 pt-lg-0 pb-lg-0 pt-5 pb-5">
                   <div className="row pt-2 pb-2">
@@ -127,7 +133,7 @@ function SmartSolutions({section1 ,section2 ,section3 , section4}) {
                </div>
             </div>
         </section>
-        <section id=""  className="slide  bg-size-cover bg-no-repeat bg-center" style={{backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important`}} >
+        <section id=""  className="slide  bg-size-cover bg-no-repeat bg-center" style={{backgroundImage: `url(${section3?.backgroundImage?.sourceUrl}) !important`}} >
             <div id="smart-solutions-container" className="container-lg">
                <div className="mx-lg-6 mx-4 pt-lg-0 pb-lg-0 pt-5 pb-5">
                   <div className="row">
@@ -154,7 +160,7 @@ function SmartSolutions({section1 ,section2 ,section3 , section4}) {
     </section>
     <section id="smart-solutions-section_4" className="section  bg-size-cover bg-no-repeat bg-center" >
 
-        <section id="" className="slide  bg-size-cover bg-no-repeat bg-center" style={{backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important`}}>
+        <section id="" className="slide  bg-size-cover bg-no-repeat bg-center" style={{backgroundImage: `url(${section4?.backgroundImage?.sourceUrl}) !important`}}>
             <div id="smart-solutions-container" className="container-lg">
                <div className="mx-lg-6 mx-4 pt-lg-0 pb-lg-0 pt-5 pb-5">
                   <div className="row pt-2 pb-2">
@@ -173,7 +179,7 @@ function SmartSolutions({section1 ,section2 ,section3 , section4}) {
                </div>
             </div>
         </section>
-        <section id="" className="slide  bg-size-cover bg-no-repeat bg-center" style={{backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important`}} >
+        <section id="" className="slide  bg-size-cover bg-no-repeat bg-center" style={{backgroundImage: `url(${section4?.backgroundImage?.sourceUrl}) !important`}} >
             <div id="smart-solutions-container" className="container-lg">
                <div className="mx-lg-6 mx-4 pt-lg-0 pb-lg-0 pt-5 pb-5">
                   <div className="row">

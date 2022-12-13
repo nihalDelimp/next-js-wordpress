@@ -1,7 +1,7 @@
 import poster from '../../public/img/blog/blog8.jpg'
 let contactusheader = 'https://alfanar-digital-solution.azurewebsites.net/public/final-images/contactus-header-img.png';
 let careersheader = 'https://alfanar-digital-solution.azurewebsites.net/public/final-images/careers-header-img.png'
-
+import CommonFooter from '../CommonFooter';
 
 const Banner = ({ banner, video, references, footerSection, singleImageData }) => {
     return (
@@ -101,8 +101,9 @@ const Banner = ({ banner, video, references, footerSection, singleImageData }) =
                     </div>
                 </div>
             </section>
+            <CommonFooter footerSection = {footerSection} />
 
-            <section id="landing-page-footer-top-section" style={{ backgroundColor: 'rgb(2,0,36)' }} className="section bg-gradient fp-section fp-table active fp-completely" data-fp-styles="null" >
+            {/* <section id="landing-page-footer-top-section" style={{ backgroundColor: 'rgb(2,0,36)' }} className="section bg-gradient fp-section fp-table active fp-completely" data-fp-styles="null" >
                 <div id="landing-page-footer-top-container" className="container-lg pb-4 pt-4 pb-lg-9 pt-lg-6">
                     <div className="mx-lg-6 mx-4 pt-lg-0 pb-lg-0 pt-5 pb-5">
                         <div className="row equalRow">
@@ -125,7 +126,7 @@ const Banner = ({ banner, video, references, footerSection, singleImageData }) =
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </>
     );
 };

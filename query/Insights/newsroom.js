@@ -2,10 +2,36 @@ import { gql } from "@apollo/client";
 import { client } from "../config";
 
 const getnewsroomData = async () => {
-    const applicationData = await client.query({
-        query: gql`
+  const applicationData = await client.query({
+    query: gql`
       query MyQuery {
-        pageBy(uri: "${process.env.WORDPRESS_URL}/index.php/newsroom") {     
+        pageBy(uri: "${process.env.WORDPRESS_URL}/index.php/newsroom") {
+
+        industriesContents {
+         industriesPageContent {
+        ... on Page_Industriescontents_IndustriesPageContent_IndustrySectionOne {
+          description
+          fieldGroupName
+          heading
+          image {
+            sourceUrl
+          }
+        }
+      }
+      } 
+
+          industriesContents {
+         industriesPageContent {
+        ... on Page_Industriescontents_IndustriesPageContent_IndustrySectionOne {
+          description
+          fieldGroupName
+          heading
+          image {
+            sourceUrl
+          }
+        }
+      }
+      }   
           insights {
           tabSection {
         ... on Page_Insights_TabSection_TabItems {
@@ -37,8 +63,8 @@ const getnewsroomData = async () => {
         }
       }
     `,
-    });
-    return applicationData;
+  });
+  return applicationData;
 };
 
 export default getnewsroomData;

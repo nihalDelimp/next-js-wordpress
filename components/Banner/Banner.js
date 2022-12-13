@@ -1,4 +1,3 @@
-import poster from '../../public/img/blog/blog8.jpg'
 let contactusheader = 'https://alfanar-digital-solution.azurewebsites.net/public/final-images/contactus-header-img.png';
 let careersheader = 'https://alfanar-digital-solution.azurewebsites.net/public/final-images/careers-header-img.png'
 import CommonFooter from '../CommonFooter';

@@ -1,8 +1,13 @@
 import React from 'react'
 import Footer from '../Footer/Footer'
 
-function CyberSecurity({ section1, section2, section3, section4 }) {
-   console.log(section2?.backgroundImage?.sourceUrl, "SOURURRB")
+function CyberSecurity({ section1, section2, section3, section4 , section5 }) {
+   console.log('SmartSolutionsTTTTTTTTTTTTT1', section1)
+   console.log('SmartSolutionsTTTTTTTTTTTTT2', section2)
+   console.log('SmartSolutionsTTTTTTTTTTTTT3', section3)
+   console.log('SmartSolutionsTTTTTTTTTTTTT4', section4)
+   console.log('SmartSolutionsTTTTTTTTTTTTT5', section5)
+   
    return (
       <div id="fullpage" style={{ backgroundColor: 'rgb(2,0,36)' }}>
          <section id="cybersecurity-section_1" className="section bg-gradient bg-size-cover bg-no-repeat bg-center fp-section fp-table active fp-completely" style={{ backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important` }}>

@@ -2,11 +2,8 @@ import React from 'react';
 import Footer from '../Footer/Footer';
 
 function ConsultationServices({section1 ,section2 ,section3 , section4 , section5}) {
-   console.log('SmartSolutionsTTTTTTTTTTTTT1', section1)
-   console.log('SmartSolutionsTTTTTTTTTTTTT2', section2)
-   console.log('SmartSolutionsTTTTTTTTTTTTT3', section3)
-   console.log('SmartSolutionsTTTTTTTTTTTTT4', section4)
-   console.log('SmartSolutionsTTTTTTTTTTTTT5', section5)
+  
+  
   return (
     <div id="fullpage">
     <section id="consultation-services-section_1" className="section bg-gradient fp-section fp-table bg-no-repeat bg-center" style={{backgroundImage: `url(${section1?.backgroundImage?.sourceUrl}) !important`}}>
@@ -27,8 +24,10 @@ function ConsultationServices({section1 ,section2 ,section3 , section4 , section
              <div className="row mt-lg-2 text-center text-lg-left">
                 <div className="col-md-12 align-self-center">
                    <h1 className="text-white font-bold bottom-buffer-1point5rem">{section1?.heading}</h1>
-                   <p className="text-white big mb-2 mt-2">Discover the knowledge you need to set your digital world approach See our experts’ views on the latest rising technologies and seize the true potential of change.</p>
-                   <p className="text-white big mb-2 mt-2">alfanar Digital Solutions is a leading consulting partner focused on your digital strategy, platform technologies, cybersecurity, and business transformation. We will work closely with your team to understand your goals, business processes, and current information systems capabilities. Let us listen to your needs and build together your IT Strategy Plan, align our tactics with your goals and tailor your enterprise digital solutions. And along the way, improve, operate, and deliver measurable results.</p>
+                   {section1.descriptionSection && section1.descriptionSection.length > 0 &&
+                   section1.descriptionSection.map((item , index) => 
+                   <p key = {index+1} className="text-white big mb-2 mt-2">{item.description}</p>
+                  ) }
                 </div>
              </div>
           </div>

@@ -9,7 +9,6 @@ const SmartSolutionsIndustry = ({ smartSolutions }) => {
     const section4 = resData && resData[3] ? resData[3] :  []
     const section5 = resData && resData[4] ? resData[4] :  []
 
-    console.log("resDataDDDDDDDDDDDDDDDDDSSSSSSS" , resData)
 
     return (
         <SmartSolutions section1={section1} section2={section2} section3={section3} section4={section4} section5 = {section5}   />

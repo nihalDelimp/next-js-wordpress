@@ -9,7 +9,6 @@ function SmartSolutions({ section1, section2, section3, section4 ,section5 }) {
    console.log('SmartSolutionsTTTTTTTTTTTTT5', section5)
 
 
-
    useEffect(() => {
       function removeJS(filename) {
          var tags = document.getElementsByTagName('script');

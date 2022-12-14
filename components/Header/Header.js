@@ -26,9 +26,11 @@ const Header = () => (
           >
             <ul className="navbar-nav main-nav flex-wrap">
               <li className="nav-item active">
-                <a className="nav-link" href="/">
+                <Link href="/" >
+                <a className="nav-link">
                   Home
                 </a>
+                </Link>
               </li>
               <li className="nav-item dropdown navbarDropdownClass">
                 <a
@@ -1122,7 +1124,7 @@ const Header = () => (
                 </div>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/gov-industry-arabic/">
+                <a className="nav-link">
                   عـربـي
                 </a>
               </li>

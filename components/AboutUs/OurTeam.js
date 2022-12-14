@@ -1,9 +1,10 @@
 import React from 'react'
+import Footer from '../Footer/Footer'
 
 function OurTeam({headerData}) {
   return (
     <div >
-      <section style={{backgroundColor: 'rgb(2,0,36)'}} id="our-team-section_1" className="wow fadeInUp  section">
+      <section  id="our-team-section_1" className="wow fadeInUp  sectionsection bg-gradient bg-size-cover bg-no-repeat bg-center fp-section fp-table  fp-completely">
          <div id="our-team-container" className="container-lg pt-4 pb-4">
             <div className="row pt-8 pb-4 pt-lg-1 pb-lg-1">
                <div className="col-lg-12 text-left">
@@ -24,7 +25,7 @@ function OurTeam({headerData}) {
             </div>
          </div>
       </section>
-      <section id="our-team-section_2" className="wow section">
+      <section id="our-team-section_2" className="wow section animated">
          <div id="our-team-container" className="container-lg pt-4 pb-4 pt-lg-8 pb-lg-8">
             <div className="row">
                <div className="col-lg-4 col-sm-12 pt-4 pb-4 text-center">
@@ -142,6 +143,7 @@ function OurTeam({headerData}) {
             </div>
          </div>
       </section>
+      <Footer />
     </div>
   )
 }

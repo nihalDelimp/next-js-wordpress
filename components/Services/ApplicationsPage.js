@@ -1,10 +1,11 @@
 import React from 'react'
+import Footer from '../Footer/Footer'
 
 function ApplicationsPage({ section1, section2, section3, section4 }) {
    console.log("section2ApplicationsPage" , section2 )
    return (
       <div id="fullpage" style={{ backgroundColor: 'rgb(2,0,36)' }}>
-         <section id="applications-section_1" className="section  bg-size-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important` }}>
+         <section id="applications-section_1" className="section bg-gradient bg-size-cover bg-no-repeat bg-center fp-section fp-table active fp-completely" style={{ backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important` }}>
             <div id="applications-container" className="container-lg pt-4 pt-lg-8 pb-4">
                <div className="mx-lg-6 mx-4 pt-lg-0 pb-lg-0 pt-5 pb-5">
                   <section id="breadcrum-section">
@@ -33,7 +34,7 @@ function ApplicationsPage({ section1, section2, section3, section4 }) {
             </div>
          </section>
 
-         <section id="applications-section_2" className="section  bg-size-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important` }}>
+         <section id="applications-section_2" className="slide bg-gradient bg-size-cover bg-no-repeat bg-center fp-slide fp-table  fp-overflow" style={{ backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important` }}>
             <div id="applications-container" className="container-lg">
                <div className="mx-lg-6 mx-4 pt-lg-0 pb-lg-0 pt-5 pb-5">
                   <div className="row pt-2 pb-2">
@@ -58,7 +59,7 @@ function ApplicationsPage({ section1, section2, section3, section4 }) {
             </div>
          </section>
          <section id="applications-section_3" className="section ">
-            <section id="" className="slide  bg-size-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important` }}>
+            <section id="" className="slide bg-gradient bg-size-cover bg-no-repeat bg-center fp-slide fp-table  fp-overflow" style={{ backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important` }}>
                <div id="applications-container" className="container-lg">
                   <div className="mx-lg-6 mx-4 pt-lg-0 pb-lg-0 pt-5 pb-5">
                      <div className="row pt-2 pb-2">
@@ -79,7 +80,7 @@ function ApplicationsPage({ section1, section2, section3, section4 }) {
                   </div>
                </div>
             </section>
-            <section id="" className="slide  bg-size-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important` }}>
+            <section id="" className="slide bg-gradient bg-size-cover bg-no-repeat bg-center fp-slide fp-table  fp-overflow" style={{ backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important` }}>
                <div id="applications-container" className="container-lg">
                   <div className="mx-lg-6 mx-4 pt-lg-0 pb-lg-0 pt-5 pb-5">
                      <div className="row pt-2 pb-2">
@@ -98,7 +99,7 @@ function ApplicationsPage({ section1, section2, section3, section4 }) {
          </section>
 
          <section id="applications-section_4" className="section ">
-            <section id="" className="slide  bg-size-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important` }}>
+            <section id="" className="slide bg-gradient bg-size-cover bg-no-repeat bg-center fp-slide fp-table  fp-overflow" style={{ backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important` }}>
                <div id="applications-container" className="container-lg">
                   <div className="mx-lg-6 mx-4 pt-lg-0 pb-lg-0 pt-5 pb-5">
                      <div className="row pt-2 pb-2">
@@ -112,7 +113,7 @@ function ApplicationsPage({ section1, section2, section3, section4 }) {
                   </div>
                </div>
             </section>
-            <section id="" className="slide  bg-size-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important` }}>
+            <section id="" className="slide bg-gradient bg-size-cover bg-no-repeat bg-center fp-slide fp-table  fp-overflow" style={{ backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important` }}>
                <div id="applications-container" className="container-lg">
                   <div className="mx-lg-6 mx-4 pt-lg-0 pb-lg-0 pt-5 pb-5">
                      <div className="row pt-2 pb-2">
@@ -135,7 +136,7 @@ function ApplicationsPage({ section1, section2, section3, section4 }) {
          </section>
 
          <section id="applications-section_5" className="section ">
-            <section id="" className="slide  bg-size-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important` }}>
+            <section id="" className="slide bg-gradient bg-size-cover bg-no-repeat bg-center fp-slide fp-table  fp-overflow" style={{ backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important` }}>
                <div id="applications-container" className="container-lg">
                   <div className="mx-lg-6 mx-4 pt-lg-0 pb-lg-0 pt-5 pb-5">
                      <div className="row pt-2 pb-2">
@@ -172,7 +173,7 @@ function ApplicationsPage({ section1, section2, section3, section4 }) {
                   </div>
                </div>
             </section>
-            <section id="" className="slide  bg-size-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important` }}>
+            <section id="" className="slide bg-gradient bg-size-cover bg-no-repeat bg-center fp-slide fp-table  fp-overflow" style={{ backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important` }}>
                <div id="applications-container" className="container-lg">
                   <div className="mx-lg-6 mx-4 pt-lg-0 pb-lg-0 pt-5 pb-5">
                      <div className="row">
@@ -199,7 +200,7 @@ function ApplicationsPage({ section1, section2, section3, section4 }) {
          </section>
 
          <section id="applications-section_6" className="section ">
-            <section id="" className="slide  bg-size-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important` }}>
+            <section id="" className="slide bg-gradient bg-size-cover bg-no-repeat bg-center fp-slide fp-table  fp-overflow" style={{ backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important` }}>
                <div id="applications-container" className="container-lg">
                   <div className="mx-lg-6 mx-4 pt-lg-0 pb-lg-0 pt-5 pb-5">
                      <div className="row pt-2 pb-2">
@@ -213,7 +214,7 @@ function ApplicationsPage({ section1, section2, section3, section4 }) {
                   </div>
                </div>
             </section>
-            <section id="" className="slide  bg-size-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important` }}>
+            <section id="" className="slide bg-gradient bg-size-cover bg-no-repeat bg-center fp-slide fp-table  fp-overflow" style={{ backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important` }}>
                <div id="applications-container" className="container-lg">
                   <div className="mx-lg-6 mx-4 pt-lg-0 pb-lg-0 pt-5 pb-5">
                      <div className="row">
@@ -247,7 +248,7 @@ function ApplicationsPage({ section1, section2, section3, section4 }) {
             </section>
          </section>
 
-         <section id="applications-section_7" className="section  bg-size-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important` }}>
+         <section id="applications-section_7" className="slide bg-gradient bg-size-cover bg-no-repeat bg-center fp-slide fp-table  fp-overflow" style={{ backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important` }}>
             <div id="applications-container" className="container-lg">
                <div className="mx-lg-6 mx-4 pt-lg-0 pb-lg-0 pt-5 pb-5">
                   <div className="row pt-2 pb-2">
@@ -274,7 +275,7 @@ function ApplicationsPage({ section1, section2, section3, section4 }) {
          </section>
 
          <section id="applications-section_8" className="section ">
-            <section id="" className="slide  bg-size-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important` }}>
+            <section id="" className="slide bg-gradient bg-size-cover bg-no-repeat bg-center fp-slide fp-table  fp-overflow" style={{ backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important` }}>
                <div id="applications-container" className="container-lg">
                   <div className="mx-lg-6 mx-4 pt-lg-0 pb-lg-0 pt-5 pb-5">
                      <div className="row pt-2 pb-2">
@@ -287,7 +288,7 @@ function ApplicationsPage({ section1, section2, section3, section4 }) {
                   </div>
                </div>
             </section>
-            <section id="" className="slide  bg-size-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important` }}>
+            <section id="" className="slide bg-gradient bg-size-cover bg-no-repeat bg-center fp-slide fp-table" style={{ backgroundImage: `url(${section2?.backgroundImage?.sourceUrl}) !important` }}>
                <div id="applications-container" className="container-lg">
                   <div className="mx-lg-6 mx-4 pt-lg-0 pb-lg-0 pt-5 pb-5">
                      <div className="row">
@@ -313,7 +314,7 @@ function ApplicationsPage({ section1, section2, section3, section4 }) {
             </section>
          </section>
 
-         <section id="landing-page-footer-top-section" className="section ">
+         <section id="landing-page-footer-top-section" className="section bg-gradient fp-section fp-table active fp-completely fp-overflow ">
             <div id="landing-page-footer-top-container" className="container-lg pb-4 pt-4 pb-lg-9 pt-lg-6">
                <div className="row equalRow">
                   <div className="col-lg-6 col-12">
@@ -324,7 +325,7 @@ function ApplicationsPage({ section1, section2, section3, section4 }) {
                            <div className="align-bottom-content-lg "><a className="btn btn-primary" href="/contactus.html" alt="Get In Touch">Get in Touch</a></div>
                         </div>
                         <div className="col-lg-5 align-self-center text-lg-right text-center">
-                           <img className="w-100 mt-5 mb-5" src={section2?.backgroundImage?.sourceUrl} />
+                           <img className="w-100 mt-5 mb-5" src="/images/final-images/contactus-header-img.png" />
                         </div>
                      </div>
                   </div>
@@ -336,13 +337,14 @@ function ApplicationsPage({ section1, section2, section3, section4 }) {
                            <div className="align-bottom-content-lg "><a className="btn btn-primary" href="https://jobs.alfanar.com/alfanar/go/All-Openings/4442101/" target="_blank" alt="Discover Opportunities">Discover Opportunities</a></div>
                         </div>
                         <div className="col-lg-5 align-self-center text-lg-right text-center">
-                           <img className="w-100" src={section2?.backgroundImage?.sourceUrl}/>
+                           <img className="w-100" src="/images/final-images/careers-header-img.png"/>
                         </div>
                      </div>
                   </div>
                </div>
             </div>
          </section>
+         <Footer />
       </div>
    )
 }

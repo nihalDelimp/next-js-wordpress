@@ -1,4 +1,5 @@
 import React from 'react' ;
+import Footer from '../Footer/Footer';
 
 function Careers() {
   return (
@@ -84,6 +85,7 @@ function Careers() {
             <div style={{height: "100px"}}></div>
          </div>
       </section>
+      <Footer  />
     </div>
   )
 }

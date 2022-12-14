@@ -1,4 +1,11 @@
-import React from 'react'
+import React from 'react';
+import Footer from '../Footer/Footer';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 function AboutDigitalSolutions(props) {
   const {
@@ -13,7 +20,7 @@ function AboutDigitalSolutions(props) {
    
   return (
     <div>
-       <section style = {{backgroundColor: 'rgb(2,0,36)'}} id="about-us-section_1" className="wow fadeInUp  section">
+       <section  id="about-us-section_1" className="wow fadeInUp  sectionsection bg-gradient bg-size-cover bg-no-repeat bg-center fp-section fp-table  fp-completely">
          <div id="about-us-container" className="container-lg pt-4 pb-4">
             <div className="row pt-8 pb-4 pt-lg-1 pb-lg-1">
                <div className="col-lg-12 text-left">
@@ -29,13 +36,13 @@ function AboutDigitalSolutions(props) {
                   <p className="text-white font-medium extra-large">System Integrator</p>
                </div>
                <div className="pt-2 pb-2 col-lg-6 align-self-center text-lg-right text-center wow">
-               <img  src= {headerData[0].image?.sourceUrl}/>
+               <img className = 'w-100'  src= {headerData[0].image?.sourceUrl}/>
                </div>
             </div>
          </div>
       </section>
 
-      <section id="about-us-section_2" className="wow section">
+      <section id="about-us-section_2" className="section  bg-size-cover bg-no-repeat bg-center fp-section fp-table  fp-completely">
          <div id="about-us-container" className="container-lg">
                <div className="row pt-4 pb-4 pt-lg-8 pb-lg-8">
                   <div className="col-lg-7 text-justify animate__animated animate__fadeInLeft">
@@ -135,29 +142,32 @@ function AboutDigitalSolutions(props) {
                     </p>
                </div>
                <div className="col-lg-12 animate__animated animate__fadeInDown">
-                  <div className="swiper-alfanar">
-                     <div className="swiper-container testimonials-swiper">
-                        <div className="swiper-wrapper">
+               <Swiper
+                        modules={[Navigation, Pagination, Scrollbar, A11y]}
+                        spaceBetween={2}
+                        slidesPerView={3}
+                        navigation
+                        pagination={{ clickable: true }}
+                        scrollbar={{ draggable: true }}
+                        onSwiper={(swiper) => console.log(swiper)}
+                        onSlideChange={() => console.log('slide change')}
+                     >
+                  
                        {testimonials.carouselItems && testimonials.carouselItems.length > 0 &&
                         testimonials.carouselItems.map((item , index)=>
+                        <SwiperSlide key={index + 1} >
                            <div key = {index+1} className="swiper-slide bg-white">
                               <div className="row py-5">
                                  <div className="col-12">
-                                    <h5 className="text-primary text-center">
-                                      {item?.itemTitle}
-                                       </h5>
+                                    <h5 className="text-primary text-center">{item?.itemTitle}</h5>
                                     <h6 className="text-primary text-center">{item.testimonialBy}</h6>
                                     <p className="text-grey text-center">{item?.author}</p>
                                  </div>
                               </div>
                            </div>
+                           </SwiperSlide>
                            )}
-                        </div>
-                     </div>
-                     <div className="swiper-button-next"></div>
-                     <div className="swiper-button-prev"></div>
-                     <div className="swiper-pagination"></div>
-                  </div>
+                           </Swiper>
                </div>
             </div>
            <div style={{height: "150px"}}></div>
@@ -172,24 +182,27 @@ function AboutDigitalSolutions(props) {
                 </div>
             </div>
             <div className="row pb-4 pt-4 pb-lg-6 pt-lg-6">
-               <div className="col-lg-12 align-self-center text-center animate__animated animate__fadeInDown pb-3 pt-3">
-                  <div className="swiper-alfanar">
-                     <div className="swiper-container top-clients-swiper">
-                        <div className="swiper-wrapper">
+            <div className="col-lg-12 animate__animated animate__fadeInDown">
+                     <Swiper
+                        modules={[Navigation, Pagination, Scrollbar, A11y]}
+                        spaceBetween={2}
+                        slidesPerView={3}
+                        navigation
+                        pagination={{ clickable: true }}
+                        scrollbar={{ draggable: true }}
+                        onSwiper={(swiper) => console.log(swiper)}
+                        onSlideChange={() => console.log('slide change')}
+                     >
                         {ourPartners.carouselImages && ourPartners.carouselImages.length > 0 &&
-                           ourPartners.carouselImages.map((item , i) =>
-                           <div key = {i+1} className="swiper-slide text-center">
-                              <img className="w-100" src= {item.sourceUrl}/>
-                           </div>)}
-                        </div>
-                     </div>
-                     <div className="swiper-navigation">
-                        <div className="swiper-button-next"></div>
-                        <div className="swiper-button-prev"></div>
-                     </div>
-                     <div className="swiper-pagination"></div>
+                           ourPartners.carouselImages.map((item, index) =>
+                              <SwiperSlide key={index + 1} >
+                                  <div className="swiper-slide text-center">
+                                 <img className="w-100" src={item.sourceUrl} />
+                              </div>
+                              </SwiperSlide>
+                           )}
+                     </Swiper>
                   </div>
-               </div>
             </div>
          </div>
       </section>
@@ -221,28 +234,30 @@ function AboutDigitalSolutions(props) {
                </div>
             </div>
             <div className="row pb-4 pt-4 wow" data-wow-duration="0.3s">
-               <div className="col-lg-12 animate__animated animate__fadeInDown">
-                  <div className="swiper-alfanar">
-                     <div className="swiper-container top-clients-swiper">
-                        <div className="swiper-wrapper">
-                           {ourTopClients.carouselImages && ourTopClients.carouselImages.length > 0 &&
-                           ourTopClients.carouselImages.map((item , i) =>
-                           <div key = {i+1} className="swiper-slide text-center">
-                              <img className="w-100" src= {item.sourceUrl}/>
-                           </div>)}
-                        </div>
-                     </div>
-                     <div className="swiper-navigation">
-                        <div className="swiper-button-next"></div>
-                        <div className="swiper-button-prev"></div>
-                     </div>
-                     <div className="swiper-pagination"></div>
+            <div className="col-lg-12 animate__animated animate__fadeInDown">
+                     <Swiper
+                        modules={[Navigation, Pagination, Scrollbar, A11y]}
+                        spaceBetween={2}
+                        slidesPerView={3}
+                        navigation
+                        pagination={{ clickable: true }}
+                        scrollbar={{ draggable: true }}
+                        onSwiper={(swiper) => console.log(swiper)}
+                        onSlideChange={() => console.log('slide change')}
+                     >
+                        {ourTopClients.carouselImages && ourTopClients.carouselImages.length > 0 &&
+                           ourTopClients.carouselImages.map((item, index) =>
+                              <SwiperSlide key={index + 1} > <div className="swiper-slide text-center">
+                                 <img className="w-100" src={item.sourceUrl} />
+                              </div>
+                              </SwiperSlide>
+                           )}
+                     </Swiper>
                   </div>
-               </div>
             </div>
          </div>
       </section>
-      <section id="landing-page-footer-top-section" className="wow section">
+      <section id="landing-page-footer-top-section" className="section bg-gradient fp-section fp-table active fp-completely">
          <div id="landing-page-footer-top-container" className="container-lg pb-4 pt-4 pb-lg-9 pt-lg-6">
             <div className="row equalRow">
                <div className="col-lg-6 col-12">
@@ -253,7 +268,7 @@ function AboutDigitalSolutions(props) {
                         <div className="align-bottom-content-lg "><a className="btn btn-primary" href="/contactus.html" alt="Get In Touch">Get in Touch</a></div>
                      </div>
                      <div className="col-lg-5 align-self-center text-lg-right text-center wow">
-                        <img className="w-100 mt-5 mb-5" src="/public/final-images/contactus-header-img.png" />
+                        <img className="w-100 mt-5 mb-5" src="/images/final-images/contactus-header-img.png" />
                      </div>
                   </div>
                </div>
@@ -265,14 +280,14 @@ function AboutDigitalSolutions(props) {
                         <div className="align-bottom-content-lg "><a className="btn btn-primary" href="https://jobs.alfanar.com/alfanar/go/All-Openings/4442101/" target="_blank" alt="Discover Opportunities">Discover Opportunities</a></div>
                      </div>
                      <div className="col-lg-5 align-self-center text-lg-right text-center wow">
-                        <img className="w-100" src="/public/final-images/careers-header-img.png" />
+                        <img className="w-100" src="/images/final-images/careers-header-img.png" />
                      </div>
                   </div>
                </div>
             </div>
          </div>
      </section>
-      
+     <Footer />
     </div>
   )
 }

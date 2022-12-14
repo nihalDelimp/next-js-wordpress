@@ -66,7 +66,7 @@ function ConsultationServices({section1 ,section2 ,section3 , section4 , section
           </div>
        </div>
     </section>
-    <Footer />
+    {/* <Footer /> */}
   </div>
   )
 }

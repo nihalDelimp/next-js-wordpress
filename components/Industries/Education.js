@@ -1,4 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Footer from '../Footer/Footer';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
+
 
 function Education({ educationData }) {
    return (
@@ -81,27 +90,29 @@ function Education({ educationData }) {
                </div>
                <div className="row pb-4 pt-4 wow" data-wow-duration="0.3s">
                   <div className="col-lg-12 animate__animated animate__fadeInDown">
-                     <div className="swiper-alfanar">
-                        <div className="swiper-container top-clients-swiper">
-                           <div className="swiper-wrapper">
-                              {educationData[3].carouselImages && educationData[3].carouselImages.length > 0 &&
-                                 educationData[3].carouselImages.map((item, index) =>
-                                 (<div key={index + 1} className="swiper-slide text-center">
-                                    <img className="w-100" src={item.sourceUrl} />
-                                 </div>)
-                                 )}
-                           </div>
-                        </div>
-                        <div className="swiper-navigation">
-                           <div className="swiper-button-next"></div>
-                           <div className="swiper-button-prev"></div>
-                        </div>
-                        <div className="swiper-pagination"></div>
-                     </div>
+                     <Swiper
+                        modules={[Navigation, Pagination, Scrollbar, A11y]}
+                        spaceBetween={2}
+                        slidesPerView={3}
+                        navigation
+                        pagination={{ clickable: true }}
+                        scrollbar={{ draggable: true }}
+                        onSwiper={(swiper) => console.log(swiper)}
+                        onSlideChange={() => console.log('slide change')}
+                     >
+                        {educationData[3].carouselImages && educationData[3].carouselImages.length > 0 &&
+                           educationData[3].carouselImages.map((item, index) =>
+                              <SwiperSlide key={index + 1} > <div className="swiper-slide text-center">
+                                 <img className="w-100" src={item.sourceUrl} />
+                              </div>
+                              </SwiperSlide>
+                           )}
+                     </Swiper>
                   </div>
                </div>
             </div>
          </section>
+         <Footer />
       </div>
    )
 }

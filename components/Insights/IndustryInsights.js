@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
+import Footer from '../Footer/Footer'
 
 function IndustryInsights({ tabContainer, tabMenuItems, headerData }) {
    const [tabMenuId, setTabMenuId] = useState('all')
 
    return (
       <div >
-         <section id="industry-insights-section_1" style={{ backgroundColor: 'rgb(2,0,36)' }} className="wow fadeInUp bg-gradient section">
+         <section id="industry-insights-section_1"  className="wow fadeInUp  sectionsection bg-gradient bg-size-cover bg-no-repeat bg-center fp-section fp-table  fp-completely">
             <div id="industry-insights-container" className="container-lg pt-4 pb-4">
                <div className="row pt-8 pb-4 pt-lg-1 pb-lg-1">
                   <div className="col-lg-12 text-left">
@@ -68,6 +69,7 @@ function IndustryInsights({ tabContainer, tabMenuItems, headerData }) {
                </div>
             </div>
          </section>
+         <Footer />
       </div>
    )
 }

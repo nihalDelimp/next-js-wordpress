@@ -178,7 +178,7 @@ function DataCenter({ section1, section2, section3, section4 }) {
                </div>
             </div>
          </section>
-         <Footer />
+         {/* <Footer /> */}
       </div>
    )
 }

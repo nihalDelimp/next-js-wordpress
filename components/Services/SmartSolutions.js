@@ -290,7 +290,7 @@ function SmartSolutions({ section1, section2, section3, section4 ,section5 }) {
                </div>
             </div>
          </section>
-         <Footer />
+         {/* <Footer /> */}
       </div>
    )
 }

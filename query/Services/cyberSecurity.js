@@ -6,55 +6,91 @@ const getCyberSecurityData = async () => {
         query: gql`
       query MyQuery {
         pageBy(uri: "${process.env.WORDPRESS_URL}/index.php/cyber-security") {     
-            servicesSection {
-                servicesContent {
-              ... on Page_Servicessection_ServicesContent_ServicesSolutionsSection1 {
-                fieldGroupName
+          servicesSection {
+      servicesContent {
+        ... on Page_Servicessection_ServicesContent_ServicesSolutionsSection4 {
+          fieldGroupName
           heading
-          descriptionSection {
+          descriptionWithIcon {
             description
-            fieldGroupName
+            heading
+            icon
           }
-          listSection {
-            fieldGroupName
-            listItems
+          image {
+            sourceUrl
           }
-          backgroundImage {
+        }
+        ... on Page_Servicessection_ServicesContent_ServicesSolutionsSection3 {
+          fieldGroupName
+          heading
+          descriptionWithSubHeading {
+            description
+            heading
+            listData {
+              listItems
+            }
+          }
+          image {
             sourceUrl
           }
         }
         ... on Page_Servicessection_ServicesContent_ServicesSolutionsSection2 {
-            fieldGroupName
+          fieldGroupName
           backgroundImage {
             sourceUrl
           }
           headingWithDescription {
             description
-            fieldGroupName
             heading
             listData {
-              fieldGroupName
               listItems
             }
           }
         }
-
-        ... on Page_Servicessection_ServicesContent_ServicesSolutionsSection4 {
-            fieldGroupName
+        ... on Page_Servicessection_ServicesContent_ServicesSolutionsSection1 {
+          fieldGroupName
           heading
-          image {
+          backgroundImage {
             sourceUrl
           }
-          descriptionWithIcon {
+          descriptionSection {
             description
             fieldGroupName
-            heading
-            icon
+          }
+          listSection {
+            listItems
           }
         }
-      
+        ... on Page_Servicessection_ServicesContent_ServicesSolutionsTextSlider {
+          fieldGroupName
+          sliderItems {
+            sliderItemsContent {
+              ... on Page_Servicessection_ServicesContent_ServicesSolutionsTextSlider_sliderItems_SliderItemsContent_HeadingOne {
+                mainHeadingH1
+              }
+              ... on Page_Servicessection_ServicesContent_ServicesSolutionsTextSlider_sliderItems_SliderItemsContent_HeadingTwo {
+                secondaryHeadingH2
+              }
+              ... on Page_Servicessection_ServicesContent_ServicesSolutionsTextSlider_sliderItems_SliderItemsContent_HeadingThree {
+                headingLabelThree
+              }
+              ... on Page_Servicessection_ServicesContent_ServicesSolutionsTextSlider_sliderItems_SliderItemsContent_DescriptionContent {
+                description
+              }
+              ... on Page_Servicessection_ServicesContent_ServicesSolutionsTextSlider_sliderItems_SliderItemsContent_List {
+                fieldGroupName
+                listData {
+                  listItems
+                }
+              }
             }
           }
+          backgroundImage {
+            sourceUrl
+          }
+        }
+      }
+    }
         }
       }
     `,

@@ -1,10 +1,15 @@
-import React from 'react'
-import Footer from '../Footer/Footer'
+import React from 'react';
+import Footer from '../Footer/Footer';
 
-function ConsultationServices({section1 ,section2 ,section3 , section4}) {
+function ConsultationServices({section1 ,section2 ,section3 , section4 , section5}) {
+   console.log('SmartSolutionsTTTTTTTTTTTTT1', section1)
+   console.log('SmartSolutionsTTTTTTTTTTTTT2', section2)
+   console.log('SmartSolutionsTTTTTTTTTTTTT3', section3)
+   console.log('SmartSolutionsTTTTTTTTTTTTT4', section4)
+   console.log('SmartSolutionsTTTTTTTTTTTTT5', section5)
   return (
-    <div id="fullpage" style={{ backgroundColor: 'rgb(2,0,36)' }}>
-    <section id="consultation-services-section_1" className="section bg-gradient fp-section fp-table bg-no-repeat bg-center" style={{backgroundImage: `url(${section2?.image?.sourceUrl}) !important`}}>
+    <div id="fullpage">
+    <section id="consultation-services-section_1" className="section bg-gradient fp-section fp-table bg-no-repeat bg-center" style={{backgroundImage: `url(${section1?.backgroundImage?.sourceUrl}) !important`}}>
        <div id="consultation-services-container" className="container-lg pt-4 pt-lg-8 pb-4">
           <div className="mx-lg-6 mx-4 pt-lg-0 pb-lg-0 pt-5 pb-5">
              <section id="breadcrum-section">
@@ -21,7 +26,7 @@ function ConsultationServices({section1 ,section2 ,section3 , section4}) {
              </section>
              <div className="row mt-lg-2 text-center text-lg-left">
                 <div className="col-md-12 align-self-center">
-                   <h1 className="text-white font-bold bottom-buffer-1point5rem">Consultation Services</h1>
+                   <h1 className="text-white font-bold bottom-buffer-1point5rem">{section1?.heading}</h1>
                    <p className="text-white big mb-2 mt-2">Discover the knowledge you need to set your digital world approach See our experts’ views on the latest rising technologies and seize the true potential of change.</p>
                    <p className="text-white big mb-2 mt-2">alfanar Digital Solutions is a leading consulting partner focused on your digital strategy, platform technologies, cybersecurity, and business transformation. We will work closely with your team to understand your goals, business processes, and current information systems capabilities. Let us listen to your needs and build together your IT Strategy Plan, align our tactics with your goals and tailor your enterprise digital solutions. And along the way, improve, operate, and deliver measurable results.</p>
                 </div>
@@ -29,6 +34,7 @@ function ConsultationServices({section1 ,section2 ,section3 , section4}) {
           </div>
        </div>
     </section>
+
     <section id="landing-page-footer-top-section" className="section bg-gradient fp-section fp-table active fp-completely fp-overflowion ">
        <div id="landing-page-footer-top-container" className="container-lg pb-4 pt-4 pb-lg-9 pt-lg-6">
           <div className="row equalRow">
@@ -60,7 +66,7 @@ function ConsultationServices({section1 ,section2 ,section3 , section4}) {
           </div>
        </div>
     </section>
-    <Footer />
+    {/* <Footer /> */}
   </div>
   )
 }
